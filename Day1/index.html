@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Student Registration Form</h1>
+
+      <form class="form" action="#" method="post">
+        <div class="row">
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" type="text" required />
+        </div>
+
+        <div class="row">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" type="text" required />
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="row two-col">
+          <div>
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date" />
+          </div>
+          <div>
+            <label>Gender</label>
+            <div class="radios">
+              <label><input type="radio" name="gender" value="female" /> Female</label>
+              <label><input type="radio" name="gender" value="male" /> Male</label>
+              <label><input type="radio" name="gender" value="other" /> Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="course">Course</label>
+          <select id="course" name="course">
+            <option value="">-- Select --</option>
+            <option>Computer Science</option>
+            <option>Mathematics</option>
+            <option>Physics</option>
+            <option>English</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3"></textarea>
+        </div>
+
+        <div class="row actions">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

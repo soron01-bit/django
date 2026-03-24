@@ -1,0 +1,21 @@
+/* Simple beginner-friendly styles */
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,system-ui,Arial,sans-serif;background:var(--bg);margin:0;line-height:1.4;color:#111}
+.container{max-width:720px;margin:48px auto;padding:20px}
+h1{text-align:center;margin-bottom:20px}
+.form{background:var(--card);padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.row{display:flex;flex-direction:column;margin-bottom:12px}
+.row label{font-size:14px;margin-bottom:6px;color:var(--muted)}
+input[type="text"],input[type="email"],input[type="date"],select,textarea{padding:10px;border:1px solid #e6e9ef;border-radius:6px;font-size:14px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.radios{display:flex;gap:12px;align-items:center}
+.actions{display:flex;justify-content:flex-end}
+button{background:var(--accent);color:#fff;padding:10px 16px;border:none;border-radius:6px;cursor:pointer}
+button:hover{opacity:0.95}
+@media (max-width:560px){.two-col{grid-template-columns:1fr}.actions{justify-content:center}}
