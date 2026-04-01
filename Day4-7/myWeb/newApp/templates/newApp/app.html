@@ -2,16 +2,24 @@
 {% extends "website/layout.html" %}
 
 {% block content %}
-    {% block products %}
+    <h1>Our Products</h1>
+    <div class="products-container">
         {% for product in products %}
-            <div class="product">
-                <h2>{{ product.name }}</h2>
+            <div class="product-card">
                 {% if product.image %}
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" width="220">
+                    <div class="product-image-wrapper">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                    </div>
                 {% endif %}
-                <p>{{ product.description }}</p>
-                <p>{{ product.price }}</p>
+                <div class="product-info">
+                    <h2>{{ product.name }}</h2>
+                    <p class="product-description">{{ product.description }}</p>
+                    <div class="product-price">₹{{ product.price }}</div>
+                    <span class="product-status {% if product.status %}status-available{% else %}status-unavailable{% endif %}">
+                        {% if product.status %}Available{% else %}Out of Stock{% endif %}
+                    </span>
+                </div>
             </div>
         {% endfor %}
-    {% endblock %}
+    </div>
 {% endblock %}
